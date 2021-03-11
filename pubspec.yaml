@@ -18,8 +18,8 @@ dependencies:
   font_awesome_flutter: ^8.12.0
   flutter_bloc: ^4.0.0
   path_provider: ^1.6.27
+  encrypt: 4.1.0
   after_layout: ^1.0.7+2
-  crypto: ^3.0.0
   flutter_svg: ^0.19.3
   mask_text_input_formatter: ^1.2.1
   fluro: ^1.6.3
