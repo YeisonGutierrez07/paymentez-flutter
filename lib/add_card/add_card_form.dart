@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show PlatformException;
+// import 'package:flutter/services.dart' show PlatformException;
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_card_io_v2/flutter_card_io_v2.dart';
+// import 'package:flutter_card_io_v2/flutter_card_io_v2.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
@@ -136,64 +136,64 @@ class _AddCardFormState extends State<AddCardForm> with WidgetsBindingObserver {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   _scanCard() async {
-    Map<String, dynamic> details;
+    // Map<String, dynamic> details;
     print('1');
     // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-      details = new Map<String, dynamic>.from(await FlutterCardIoV2.scanCard({
-            "requireExpiry": true,
-            "scanExpiry": true,
-            "requireCVV": false,
-            "requirePostalCode": false,
-            "restrictPostalCodeToNumericOnly": false,
-            "requireCardHolderName": true,
-            "hideCardIOLogo": true,
-            "useCardIOLogo": false,
-            "usePayPalActionbarIcon": false,
-            "suppressManualEntry": true,
-            "suppressConfirmation": true,
-            "scanInstructions": S.of(context).add_card_camera_instructions,
-          }) ??
-          new Map());
-      print('2');
-    } on PlatformException catch (e) {
-      print(e);
-      print('3');
-      return;
-    }
-    print('5');
+    // try {
+    //   details = new Map<String, dynamic>.from(await FlutterCardIoV2.scanCard({
+    //         "requireExpiry": true,
+    //         "scanExpiry": true,
+    //         "requireCVV": false,
+    //         "requirePostalCode": false,
+    //         "restrictPostalCodeToNumericOnly": false,
+    //         "requireCardHolderName": true,
+    //         "hideCardIOLogo": true,
+    //         "useCardIOLogo": false,
+    //         "usePayPalActionbarIcon": false,
+    //         "suppressManualEntry": true,
+    //         "suppressConfirmation": true,
+    //         "scanInstructions": S.of(context).add_card_camera_instructions,
+    //       }) ??
+    //       new Map());
+    //   print('2');
+    // } on PlatformException catch (e) {
+    //   print(e);
+    //   print('3');
+    //   return;
+    // }
+    // print('5');
 
-    print(details);
-    print('6');
+    // print(details);
+    // print('6');
 
-    if (details == null) {
-      return;
-    }
+    // if (details == null) {
+    //   return;
+    // }
 
-    if (!mounted) return;
+    // if (!mounted) return;
 
-    setState(() {
-      print('7');
-      print(details);
+    // setState(() {
+    //   print('7');
+    //   print(details);
 
-      if (details['cardholderName'] != null) {
-        _nameController.text = details['cardholderName'].toString();
-      }
-      if (details['cardNumber'] != null) {
-        _numberController.text = details['cardNumber'].toString();
-      }
-      if ((details['expiryMonth'] ?? 0) != 0 &&
-          (details['expiryYear'] ?? 0) != 0) {
-        _dateExpController.text = "" +
-            '00'.substring(details['expiryMonth'].toString().length) +
-            details['expiryMonth'].toString() +
-            "/" +
-            details['expiryYear'].toString().substring(2);
-      }
-      if (details['cvv'] != null) {
-        _cvvController.text = details['cvv'];
-      }
-    });
+    //   if (details['cardholderName'] != null) {
+    //     _nameController.text = details['cardholderName'].toString();
+    //   }
+    //   if (details['cardNumber'] != null) {
+    //     _numberController.text = details['cardNumber'].toString();
+    //   }
+    //   if ((details['expiryMonth'] ?? 0) != 0 &&
+    //       (details['expiryYear'] ?? 0) != 0) {
+    //     _dateExpController.text = "" +
+    //         '00'.substring(details['expiryMonth'].toString().length) +
+    //         details['expiryMonth'].toString() +
+    //         "/" +
+    //         details['expiryYear'].toString().substring(2);
+    //   }
+    //   if (details['cvv'] != null) {
+    //     _cvvController.text = details['cvv'];
+    //   }
+    // });
   }
 
   @override

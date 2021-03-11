@@ -33,7 +33,7 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> with AfterLayoutMixin<App> {
-  List<LocalizationsDelegate> delegates = List<LocalizationsDelegate>();
+  List<LocalizationsDelegate> delegates = [];
 
   @override
   void initState() {
@@ -51,7 +51,7 @@ class _AppState extends State<App> with AfterLayoutMixin<App> {
 
   @override
   Widget build(BuildContext context) {
-    final router = new _fluroDart.Router();
+    final router = new _fluroDart.FluroRouter();
     Routes.configureRoutes(router);
 
     return MaterialApp(

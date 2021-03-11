@@ -14,7 +14,7 @@ class Routes {
   static final String root = "/";
   static final String addCard = "/add_card";
 
-  static void configureRoutes(_fluroDart.Router router) {
+  static void configureRoutes(_fluroDart.FluroRouter router) {
     router.notFoundHandler = _fluroDart.Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {
       debugPrint("ROUTE WAS NOT FOUND !!!");

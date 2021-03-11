@@ -13,23 +13,19 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   dio: ^3.0.10
-  equatable: ^1.2.4
-  meta: ^1.1.8
-  font_awesome_flutter: ^8.8.1
+  equatable: ^2.0.0
+  meta: ^1.3.0
+  font_awesome_flutter: ^8.12.0
   flutter_bloc: ^4.0.0
-  path_provider: ^1.6.14
+  path_provider: ^2.0.1
   after_layout: ^1.0.7+2
-  crypto: ^2.1.5
-  flutter_svg: ^0.18.1
-  mask_text_input_formatter: ^1.1.0
+  crypto: ^3.0.0
+  flutter_svg: ^0.19.3
+  mask_text_input_formatter: ^1.2.1
   fluro: ^1.6.3
   flutter_kount:
     git:
       url: git://github.com/oaacelasu/flutter_kount.git
-      ref: master
-  flutter_card_io_v2:
-    git:
-      url: git://github.com/oaacelasu/flutter_card_io_v2.git
       ref: master
 
   cupertino_icons: ^0.1.2
